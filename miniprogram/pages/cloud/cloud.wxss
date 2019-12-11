@@ -1,0 +1,4 @@
+/* miniprogram/pages/cloud/cloud.wxss */
+.itemView {
+  display: flex;
+}

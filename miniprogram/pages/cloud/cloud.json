@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "胶水提交页面",
+  "usingComponents": {
+    "wux-cell-group": "/components/dist/cell-group/index",
+    "wux-cell": "/components/dist/cell/index",
+    "wux-input": "/components/dist/input/index",
+    "popup": "/components/popup/popup"
+  }
+}

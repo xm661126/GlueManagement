@@ -1,0 +1,22 @@
+<!--miniprogram/pages/cloud/cloud.wxml-->
+<view class="itemView">胶水型号：
+  <input class="input" name="glueType" placeholder="请输入胶水型号" bindinput="glueTypeInput" />
+</view>
+<view class="itemView">物料名称：
+  <input class="input" name='materialName' placeholder="请输入物料名称" bindinput="materialInput" />
+</view>
+<view class="itemView">胶水数量：
+  <input class="input" name='number' placeholder="请输入数量" bindinput="numberInput" />
+</view>
+<view class="viewName" style="background-color:#fbf9fe">
+  <button class="loginBtn" bindtap="showPopup">提交</button>
+  <button class="resetBtn" bindtap="cancel">取消</button>
+  <popup id='popup' 
+      title='小组件' 
+      content='确认提交' 
+      btn_no='否' 
+      btn_ok='是'
+      bind:error="_error"  
+      bind:success="_success">
+  </popup>
+</view>
