@@ -16,6 +16,24 @@
     "pages/cloud/cloud",
     "pages/cloud2/cloud2"
   ],
+  "tabBar": {
+    "color":"#ccc",
+    "selectedcolor":"#f00",
+    "list": [
+      {
+        "pagePath": "pages/cloud/cloud",
+        "text": "数据提交",
+        "iconPath": "images/glue1.png",
+        "selectedIconPath": "images/glue2.png"
+      },
+      {
+        "pagePath": "pages/cloud2/cloud2",
+        "text": "回料",
+        "iconPath": "images/glue1.png",
+        "selectedIconPath": "images/glue2.png"
+      }
+    ]
+  },
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",

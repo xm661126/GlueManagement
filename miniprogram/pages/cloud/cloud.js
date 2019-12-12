@@ -1,34 +1,45 @@
 // miniprogram/pages/cloud/cloud.js
 const db = wx.cloud.database();
 var app = getApp()
+data: {
+  glueType: ''
+  materialName: ''
+  number: 0
+}
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     glueType: '',
     materialName: '',
     number: 0,
-
   },
+  /**
+   * 页面的初始数据
+   */
   glueTypeInput: function(e1) {
     console.log(e1)
-    glueType: e1.detail.value
+    this.setData({
+      glueType: e1.detail.value
+    })
+
+    console.log(this.data.glueType)
   },
   materialInput: function(e2) {
     console.log(e2)
-    materialName: e2.detail.value
+    this.setData({
+      materialName: e2.detail.value
+    })
+    console.log(this.data.materialName)
   },
   numberInput: function(e3) {
     console.log(e3)
-    number: e3.detail.value
+    this.setData({
+      number: e3.detail.value
+    })
+    console.log(this.data.number)
   },
   cancel() {
 
   },
-
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -51,7 +62,26 @@ Page({
   },
   _success() {
     console.log('你点击了确定');
-    this.popup.hidePopup();
+    console.log("开始传输数据");
+    db.collection('Glue').add({
+
+        data: {
+          type: this.data.glueType,
+          name: this.data.materialName,
+          number: this.data.number,
+        },
+        success: res => {
+          console.log(this.data.glueType);
+          console.log(res);
+          console.log("数据传输成功");
+        },
+        fail: err => {
+          console.log(err);
+          console.log("数据传输失败");
+        }
+      }),
+
+      this.popup.hidePopup();
   },
   /**
    * 生命周期函数--监听页面显示
@@ -89,7 +119,7 @@ Page({
   },
 
   /**
-   * 用户点击右上角分享
+   * 用户点击右上角分享  可关闭共享
    */
   onShareAppMessage: function() {
 
