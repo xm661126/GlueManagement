@@ -5,13 +5,15 @@
 <view class="itemView">接货人：
   <input class="input" name='receivingPerson' placeholder="请输入接货人名称" bindinput="receivingPersonInput" />
 </view>
-
-
-  <picker mode="date" value="{{date}}" start="2019-10-01" end="2020-10-08" bindchange="changeDate">
+<picker mode="date" value="{{date}}" start="2019-10-01" end="2020-10-08" bindchange="changeDate">
   <view class="date" name="date">入库时间：
-  <input name='addtime' value="{{date}}"  disabled="true" placeholder="请选择日期"></input>
+    <input name='addtime' value="{{date}}" disabled="true" placeholder="请选择日期"></input>
   </view>
- </picker>
+</picker>
+<view class="glueList" wx:for="{{glueList}}">
+<view>你看得见我吗</view>
+</view>
+
 
 <view class="viewName" style="background-color:#fbf9fe">
   <button class="loginBtn" bindtap="showPopup">增加</button>

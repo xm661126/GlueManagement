@@ -5,13 +5,16 @@ data: {
   orderNumber: ''
   receivingPerson: ''
   number: 0
-  date:''
+  date: ''
 }
 Page({
   data: {
     glueType: '',
     materialName: '',
     number: 0,
+    materialList: [],
+    countNumber: 0,
+    glueList: [],
   },
   //输入 订货单号
   orderNumberInput: function(e1) {
@@ -31,10 +34,10 @@ Page({
     console.log(this.data.receivingPerson)
   },
   //改变入库时间
-  changeDate:function(e){
-this.setData({
-date:e.detail.value
-});
+  changeDate: function(e) {
+    this.setData({
+      date: e.detail.value
+    });
   },
   // //
 
@@ -75,7 +78,17 @@ date:e.detail.value
         success: res => {
           console.log(this.popup.data.glueType);
           console.log(res);
-          console.log("数据传输成功");
+          console.log("数据传输成功")
+        
+          this.data.glueList.push({
+            glueType: this.popup.data.glueType,
+            materialName: this.popup.data.materialName,
+            number: this.popup.data.number
+          });
+          this.setData({
+          glueList:this.data.glueList
+          })
+          console.log('清单类型为',this.data.glueList,'显示结束')
         },
         fail: err => {
           console.log(err);
