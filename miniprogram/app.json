@@ -1,34 +1,23 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib",
-    "pages/openapi/openapi",
-    "pages/openapi/serverapi/serverapi",
-    "pages/openapi/callback/callback",
-    "pages/openapi/cloudid/cloudid",
-    "pages/im/im",
-    "pages/im/room/room",
     "pages/cloud/cloud",
-    "pages/cloud2/cloud2"
+    "pages/cloud2/cloud2",
+    "pages/userInformation/userInformation"
   ],
   "tabBar": {
-    "color":"#ccc",
-    "selectedcolor":"#f00",
+    "color": "#ccc",
+    "selectedcolor": "#f00",
     "list": [
       {
-        "pagePath": "pages/cloud/cloud",
-        "text": "数据提交",
+        "pagePath": "pages/index/index",
+        "text": "主页",
         "iconPath": "images/glue1.png",
         "selectedIconPath": "images/glue2.png"
       },
       {
-        "pagePath": "pages/cloud2/cloud2",
-        "text": "回料",
+        "pagePath": "pages/userInformation/userInformation",
+        "text": "我的个人信息",
         "iconPath": "images/glue1.png",
         "selectedIconPath": "images/glue2.png"
       }
