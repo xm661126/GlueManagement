@@ -1,22 +1,21 @@
 <!--miniprogram/pages/cloud/cloud.wxml-->
-<view class="itemView">胶水型号：
-  <input class="input" name="glueType" placeholder="请输入胶水型号" bindinput="glueTypeInput" />
+<view class="itemView">订货单号：
+  <input class="input" name="orderNumber" placeholder="请输入订货单号" bindinput="orderNumberInput" />
 </view>
-<view class="itemView">物料名称：
-  <input class="input" name='materialName' placeholder="请输入物料名称" bindinput="materialInput" />
+<view class="itemView">接货人：
+  <input class="input" name='receivingPerson' placeholder="请输入接货人名称" bindinput="receivingPersonInput" />
 </view>
-<view class="itemView">胶水数量：
-  <input class="input" name='number' placeholder="请输入数量" bindinput="numberInput" />
-</view>
+
+
+  <picker mode="date" value="{{date}}" start="2019-10-01" end="2020-10-08" bindchange="changeDate">
+  <view class="date" name="date">入库时间：
+  <input name='addtime' value="{{date}}"  disabled="true" placeholder="请选择日期"></input>
+  </view>
+ </picker>
+
 <view class="viewName" style="background-color:#fbf9fe">
-  <button class="loginBtn" bindtap="showPopup">提交</button>
+  <button class="loginBtn" bindtap="showPopup">增加</button>
   <button class="resetBtn" bindtap="cancel">取消</button>
-  <popup id='popup' 
-      title='小组件' 
-      content='确认提交' 
-      btn_no='否' 
-      btn_ok='是'
-      bind:error="_error"  
-      bind:success="_success">
+  <popup id='popup' title='胶水提交' content='请提交胶水信息' btn_no='否' btn_ok='是' bind:error="_error" bind:success="_success">
   </popup>
 </view>

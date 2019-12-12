@@ -3,6 +3,15 @@
   <view class='popup-container'>
     <view class="wx-popup-title">{{title}}</view>
     <view class="wx-popup-con">{{content}}</view>
+    <view class="itemView">胶水型号：
+      <input class="input" name="glueType" placeholder="请输入胶水型号" bindinput="glueTypeInput" />
+    </view>
+    <view class="itemView">物料名称：
+      <input class="input" name='materialName' placeholder="请输入物料名称" bindinput="materialNameInput" />
+    </view>
+    <view class="itemView">胶水数量：
+      <input class="input" name='number' placeholder="请输入数量" bindinput="numberInput" />
+    </view>
     <view class="wx-popup-btn">
       <text class="btn-no" bindtap='_error'>{{btn_no}}</text>
       <text class="btn-ok" bindtap='_success'>{{btn_ok}}</text>

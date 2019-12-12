@@ -2,3 +2,6 @@
 .itemView {
   display: flex;
 }
+.date{
+  display: flex;
+}

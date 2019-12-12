@@ -2,9 +2,10 @@
 const db = wx.cloud.database();
 var app = getApp()
 data: {
-  glueType: ''
-  materialName: ''
+  orderNumber: ''
+  receivingPerson: ''
   number: 0
+  date:''
 }
 Page({
   data: {
@@ -12,34 +13,34 @@ Page({
     materialName: '',
     number: 0,
   },
-  /**
-   * 页面的初始数据
-   */
-  glueTypeInput: function(e1) {
+  //输入 订货单号
+  orderNumberInput: function(e1) {
     console.log(e1)
     this.setData({
-      glueType: e1.detail.value
+      orderNumber: e1.detail.value
     })
 
-    console.log(this.data.glueType)
+    console.log(this.data.orderNumber)
   },
-  materialInput: function(e2) {
+  //输入接货人
+  receivingPersonInput: function(e2) {
     console.log(e2)
     this.setData({
-      materialName: e2.detail.value
+      receivingPerson: e2.detail.value
     })
-    console.log(this.data.materialName)
+    console.log(this.data.receivingPerson)
   },
-  numberInput: function(e3) {
-    console.log(e3)
-    this.setData({
-      number: e3.detail.value
-    })
-    console.log(this.data.number)
+  //改变入库时间
+  changeDate:function(e){
+this.setData({
+date:e.detail.value
+});
   },
-  cancel() {
+  // //
 
-  },
+  // cancel() {
+
+  // },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -58,6 +59,7 @@ Page({
   },
   _error() {
     console.log('你点击了取消');
+    console.log('数据传输取消');
     this.popup.hidePopup();
   },
   _success() {
@@ -66,12 +68,12 @@ Page({
     db.collection('Glue').add({
 
         data: {
-          type: this.data.glueType,
-          name: this.data.materialName,
-          number: this.data.number,
+          type: this.popup.data.glueType,
+          name: this.popup.data.materialName,
+          number: this.popup.data.number,
         },
         success: res => {
-          console.log(this.data.glueType);
+          console.log(this.popup.data.glueType);
           console.log(res);
           console.log("数据传输成功");
         },

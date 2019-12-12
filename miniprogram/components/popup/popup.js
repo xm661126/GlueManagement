@@ -1,5 +1,11 @@
 // components/popup/popup.js
+data: {
+  glueType: ''
+  materialName: ''
+  number: 0
+}
 Component({
+
   options: {
     multipleSlots: true // 在组件定义时的选项中启用多slot支持
   },
@@ -7,14 +13,14 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    title: {            // 属性名
-      type: String,     // 类型（必填），目前接受的类型包括：String, Number, Boolean, Object, Array, null（表示任意类型）
-      value: '提示信息'     // 属性初始值（可选），如果未指定则会根据类型选择一个
+    title: { // 属性名
+      type: String, // 类型（必填），目前接受的类型包括：String, Number, Boolean, Object, Array, null（表示任意类型）
+      value: '提示信息' // 属性初始值（可选），如果未指定则会根据类型选择一个
     },
     // 弹窗内容
     content: {
       type: String,
-      value: '请再次确认是否提交'
+      value: ''
     },
     // 弹窗取消按钮文字
     btn_no: {
@@ -33,6 +39,7 @@ Component({
    */
   data: {
     flag: true,
+
   },
 
   /**
@@ -40,7 +47,31 @@ Component({
    */
   methods: {
     //隐藏弹框
-    hidePopup: function () {
+    glueTypeInput: function (e1) {
+      console.log(e1)
+      this.setData({
+        glueType: e1.detail.value
+      })
+
+      console.log(this.data.glueType)
+    },
+    materialNameInput: function (e2) {
+      console.log(e2)
+      this.setData({
+        materialName: e2.detail.value
+      })
+
+      console.log(this.data.materialName)
+    },
+
+    numberInput: function (e3) {
+      console.log(e3)
+      this.setData({
+        number: e3.detail.value
+      })
+      console.log(this.data.number)
+    },
+    hidePopup: function() {
       this.setData({
         flag: !this.data.flag
       })
@@ -52,9 +83,9 @@ Component({
       })
     },
     /*
-    * 内部私有方法建议以下划线开头
-    * triggerEvent 用于触发事件
-    */
+     * 内部私有方法建议以下划线开头
+     * triggerEvent 用于触发事件
+     */
     _error() {
       //触发取消回调
       this.triggerEvent("error")
