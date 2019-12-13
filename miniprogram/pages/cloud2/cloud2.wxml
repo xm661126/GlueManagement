@@ -1,3 +1,13 @@
 <!--miniprogram/pages/cloud2/cloud2.wxml-->
-<text>没戳，这就是第二页</text>
-<button class="button1" bindtap="showForm">请点击我提交回库清单</button>
+<!-- hidden="{{status}}" -->
+<wux-cell-group title="胶水回库清单">
+  <wux-cell hover-class="none">
+    <wux-field name="input1" initialValue="张三">
+      <wux-input label="收桶人" bindtap="consigneeName" />
+
+      <wux-input label="收桶人2" bindtap="consigneeName" />
+      <wux-input label="收桶人3" bindtap="consigneeName" />
+
+    </wux-field>
+  </wux-cell>
+</wux-cell-group>

@@ -13,7 +13,6 @@
     "wux-rater": "/components/dist/rater/index",
     "wux-input-number": "/components/dist/input-number/index",
     "wux-textarea": "/components/dist/textarea/index",
-    "wux-input": "/components/dist/input/index",
     "wux-checkbox-group": "/components/dist/checkbox-group/index",
     "wux-checkbox": "/components/dist/checkbox/index",
     "wux-radio-group": "/components/dist/radio-group/index",
