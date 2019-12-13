@@ -4,6 +4,7 @@
     "wux-cell-group": "/components/dist/cell-group/index",
     "wux-cell": "/components/dist/cell/index",
     "wux-input": "/components/dist/input/index",
-    "popup": "/components/popup/popup"
+    "popup": "/components/popup/popup",
+    "wux-button":"/components/dist/button/index"
   }
 }
