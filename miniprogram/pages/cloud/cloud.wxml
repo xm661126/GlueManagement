@@ -12,7 +12,7 @@
 </picker>
 <view class="container1">胶水提交清单：
 <view class="glueList"data-index="{{index}}" wx:for="{{glueList}}">
-<view class="glueList2">{{index+1}}.  胶水型号:  "{{item.glueType}} 物料名称:   "{{item.materialName}}"  数量 :   "{{item.number}}"</view>
+<view class="glueList2">{{index+1}}.  胶水型号:  "{{item.glueType}}" 物料名称:   "{{item.materialName}}"  数量 :   "{{item.number}}"</view>
 </view>
 </view>
 

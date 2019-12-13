@@ -3,6 +3,7 @@ data: {
   glueType: ''
   materialName: ''
   number: 0
+  inputInit:''
 }
 Component({
 
@@ -39,6 +40,7 @@ Component({
    */
   data: {
     flag: true,
+    inputInit: '',
 
   },
 
@@ -79,7 +81,9 @@ Component({
     //展示弹框
     showPopup() {
       this.setData({
-        flag: !this.data.flag
+        inputInit: '',
+        flag: !this.data.flag,
+
       })
     },
     /*
