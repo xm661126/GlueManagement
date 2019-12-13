@@ -6,3 +6,32 @@ page {
   flex-direction: column;
   justify-content: flex-start;
 }
+.happynewyear{
+ position: relative;
+ bottom: 0;
+  width: 750rpx;
+  height: 500rpx;
+
+}
+.container3{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  width:100%;
+}
+.container4{
+text-align: center;
+margin-top: 90rpx;
+align-items: center;
+width:100%;
+
+}
+.icon01{
+  /* margin-left: 50rpx; */
+  height: 100rpx;
+  width:100rpx;
+}
+.button01{
+/* margin-left: 50rpx; */
+ font-size: 30rpx;
+  }

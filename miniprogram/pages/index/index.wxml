@@ -1,4 +1,35 @@
 <!--index.wxml-->
-<view class="container">
-
+<view class="container1">
+  <view class="container2">
+    <image class="happynewyear" src="/images/happynewyear.png" mode="scaleToFill">
+    </image>
+  </view>
+  <view class="container3">
+    <view class="container4" bindtap="changeToWarehousing">
+      <image class="icon01" src="/images/warehousing.png"></image>
+      <view class="button01">胶水入库</view>
+    </view>
+    <view class="container4">
+      <image class="icon01" src="/images/recovery.png"></image>
+      <view class="button01">胶水回库</view>
+    </view>
+    <view class="container4">
+      <image class="icon01" src="/images/record.png"></image>
+      <view class="button01">历史记录</view>
+    </view>
+  </view>
+  <view class="container3">
+    <view class="container4">
+      <image class="icon01" src="/images/search.png"></image>
+      <view class="button01">库存查看</view>
+    </view>
+    <view class="container4">
+      <image class="icon01" src="/images/statsitcs.png"></image>
+      <view class="button01">残余量统计</view>
+    </view>
+    <view class="container4">
+      <image class="icon01" src="/images/record.png"></image>
+      <view class="button01">冲胶记录</view>
+    </view>
+  </view>
 </view>
