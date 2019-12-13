@@ -10,8 +10,10 @@
     <input name='addtime' value="{{date}}" disabled="true" placeholder="请选择日期"></input>
   </view>
 </picker>
-<view class="glueList" wx:for="{{glueList}}">
-<view>你看得见我吗</view>
+<view class="container1">胶水提交清单：
+<view class="glueList"data-index="{{index}}" wx:for="{{glueList}}">
+<view class="glueList2">{{index+1}}.  胶水型号:  "{{item.glueType}} 物料名称:   "{{item.materialName}}"  数量 :   "{{item.number}}"</view>
+</view>
 </view>
 
 
