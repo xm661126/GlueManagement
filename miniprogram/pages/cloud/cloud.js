@@ -67,37 +67,43 @@ Page({
   },
   _success() {
     console.log('你点击了确定');
-    console.log("开始传输数据");
-    db.collection('Glue').add({
 
-        data: {
-          type: this.popup.data.glueType,
-          name: this.popup.data.materialName,
-          number: this.popup.data.number,
-        },
-        success: res => {
-          console.log(this.popup.data.glueType);
-          console.log(res);
-          console.log("数据传输成功")
-        
-          this.data.glueList.push({
-            glueType: this.popup.data.glueType,
-            materialName: this.popup.data.materialName,
-            number: this.popup.data.number
-          });
-          this.setData({
-          glueList:this.data.glueList
-          })
-          console.log('清单类型为',this.data.glueList,'显示结束')
-        },
-        fail: err => {
-          console.log(err);
-          console.log("数据传输失败");
-        }
-      }),
-
-      this.popup.hidePopup();
+    this.data.glueList.push({
+      glueType: this.popup.data.glueType,
+      materialName: this.popup.data.materialName,
+      number: this.popup.data.number
+    });
+    console.log("数据已传输至清单");
+    this.setData({
+      glueList: this.data.glueList
+    });
+    console.log('清单类型为', this.data.glueList, '显示结束')
+    this.popup.hidePopup();
   },
+  listUpload() {
+    let length = this.data.glueList.length;
+    console.log(length)
+    for (let i = 0; i < length; i = i + 1) {
+    db.collection('Glue').add({
+      data: {
+        glueType: this.data.glueList[i].glueType,
+        materialName: this.data.glueList[i].materialName,
+        number: this.data.glueList[i].number,
+
+      },
+      success: res => {
+        console.log(this.data.glueList);
+        console.log(res);
+        console.log(i ,"数据传输成功")
+      },
+      fail: err => {
+        console.log(err);
+        console.log("数据传输失败");
+      }
+    })
+    }
+  },
+
   /**
    * 生命周期函数--监听页面显示
    */
