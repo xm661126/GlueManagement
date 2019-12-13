@@ -1,3 +1,26 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "回库提交页面",
+  "usingComponents": {
+    "wux-cell-group": "/components/dist/cell-group/index",
+    "wux-cell": "/components/dist/cell/index",
+    "wux-input": "/components/dist/input/index",
+    "popup": "/components/popup/popup",
+    "wux-button": "/components/dist/button/index",
+    "wux-popup": "/components/dist/popup/index",
+    "wux-form": "/components/dist/form/index",
+    "wux-field": "/components/dist/field/index",
+    "wux-slider": "/components/dist/slider/index",
+    "wux-rater": "/components/dist/rater/index",
+    "wux-input-number": "/components/dist/input-number/index",
+    "wux-textarea": "/components/dist/textarea/index",
+    "wux-input": "/components/dist/input/index",
+    "wux-checkbox-group": "/components/dist/checkbox-group/index",
+    "wux-checkbox": "/components/dist/checkbox/index",
+    "wux-radio-group": "/components/dist/radio-group/index",
+    "wux-radio": "/components/dist/radio/index",
+    "wux-switch": "/components/dist/switch/index",
+    "wux-picker": "/components/dist/picker/index",
+    "wux-date-picker": "/components/dist/date-picker/index",
+    "wux-popup-select": "/components/dist/popup-select/index"
+  }
 }

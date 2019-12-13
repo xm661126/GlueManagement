@@ -5,6 +5,7 @@
     "wux-cell": "/components/dist/cell/index",
     "wux-input": "/components/dist/input/index",
     "popup": "/components/popup/popup",
-    "wux-button":"/components/dist/button/index"
+    "wux-button": "/components/dist/button/index",
+    "wux-popup": "/components/dist/popup/index"
   }
 }

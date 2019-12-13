@@ -9,7 +9,7 @@
       <image class="icon01" src="/images/warehousing.png"></image>
       <view class="button01">胶水入库</view>
     </view>
-    <view class="container4">
+    <view class="container4" bindtap="changeToRerecovery">
       <image class="icon01" src="/images/recovery.png"></image>
       <view class="button01">胶水回库</view>
     </view>

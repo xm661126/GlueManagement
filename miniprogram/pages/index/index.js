@@ -10,6 +10,11 @@ Page({
       url: '/pages/cloud/cloud',
     })
   },
+  changeToRerecovery: function () {
+    wx.navigateTo({
+      url: '/pages/cloud2/cloud2',
+    })
+  },
 
   onLoad: function() {
     wx.setNavigationBarTitle({
