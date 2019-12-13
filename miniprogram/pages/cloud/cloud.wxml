@@ -19,8 +19,11 @@
 
 <view class="viewName" style="background-color:#fbf9fe">
   <button class="loginBtn" bindtap="showPopup">增加</button>
-  <button class="resetBtn" bindtap="cancel">取消</button>
+  <view class="container2">
+  <button class="resetBtn" bindtap="returnHomepage">取消</button>
   <button class="resetBtn" bindtap="listUpload">提交</button>
+  </view>
+  
   <popup id='popup' title='胶水提交' content='请提交胶水信息' btn_no='否' btn_ok='是' bind:error="_error" bind:success="_success">
   </popup>
 </view>

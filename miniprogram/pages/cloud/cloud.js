@@ -41,9 +41,13 @@ Page({
   },
   // //
 
-  // cancel() {
-
-  // },
+  returnHomepage:function() {
+    console.log("正在返回");
+    wx.navigateBack({
+      delta:0
+    })
+    console.log("已返回");
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -84,24 +88,41 @@ Page({
     let length = this.data.glueList.length;
     console.log(length)
     for (let i = 0; i < length; i = i + 1) {
-    db.collection('Glue').add({
-      data: {
-        glueType: this.data.glueList[i].glueType,
-        materialName: this.data.glueList[i].materialName,
-        number: this.data.glueList[i].number,
+      db.collection('Glue').add({
+        data: {
+          glueType: this.data.glueList[i].glueType,
+          materialName: this.data.glueList[i].materialName,
+          number: this.data.glueList[i].number,
 
-      },
-      success: res => {
-        console.log(this.data.glueList);
-        console.log(res);
-        console.log(i ,"数据传输成功")
-      },
-      fail: err => {
-        console.log(err);
-        console.log("数据传输失败");
-      }
-    })
+        },
+        success: res => {
+          console.log(this.data.glueList);
+          console.log(res);
+          console.log(i, "数据传输成功");
+          //重置数组内容
+          wx.showToast({
+            title: '提交已成功',
+            icon: '',
+            image: '',
+            duration: 3000,
+            mask: true,
+            success: function(res) {},
+            fail: function(res) {},
+            complete: function(res) {},
+          })
+        },
+        fail: err => {
+          console.log(err);
+          console.log("数据传输失败");
+        }
+      })
     }
+    //清空数组，界面归零
+    this.setData({
+      glueList: ''
+    });
+    console.log("数组已清空");
+    console.log(this.data.glueList);
   },
 
   /**

@@ -12,14 +12,14 @@
       {
         "pagePath": "pages/index/index",
         "text": "主页",
-        "iconPath": "images/glue1.png",
-        "selectedIconPath": "images/glue2.png"
+        "iconPath": "images/homepage.png",
+        "selectedIconPath": "images/homepageSelect.png"
       },
       {
         "pagePath": "pages/userInformation/userInformation",
         "text": "我的个人信息",
-        "iconPath": "images/glue1.png",
-        "selectedIconPath": "images/glue2.png"
+        "iconPath": "images/person.png",
+        "selectedIconPath": "images/personSelect.png"
       }
     ]
   },
