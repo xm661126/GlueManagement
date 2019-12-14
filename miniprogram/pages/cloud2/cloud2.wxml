@@ -4,10 +4,45 @@
   <wux-cell hover-class="none">
     <wux-field name="input1" initialValue="张三">
       <wux-input label="收桶人" bindtap="consigneeName" />
-
-      <wux-input label="收桶人2" bindtap="consigneeName" />
-      <wux-input label="收桶人3" bindtap="consigneeName" />
-
+    </wux-field>
+    <wux-field name="input2" initialValue="李四">
+      <wux-input label="回库时间" bindtap="consigneeName" />
     </wux-field>
   </wux-cell>
 </wux-cell-group>
+<!-- 弹出框-->
+
+<view class="page">
+
+  <wux-cell-group title="胶水回库信息登入">
+    <wux-cell hover-class="none">
+      <wux-field name="input3" initialValue="请输入胶水型号">
+        <wux-input name="glueType" label="胶水型号:" />
+      </wux-field>
+      <wux-field name="input4" initialValue="请输入物料号码">
+        <wux-input name="materialNumber" label="物料号码:" />
+      </wux-field>
+      <wux-field name="input5" initialValue="请输入剩余重量">
+        <wux-input name="materialNumber" label="剩余重量:" />
+      </wux-field>
+    </wux-cell>
+  </wux-cell-group>
+  <view class="container1">
+    <button class="resetBt2" bindtap="onSubmit">"提交"</button>
+    <button class="resetBt3" bindtap="onReset">"取消"</button>
+  </view>
+</view>
+
+
+
+
+
+
+<!-- 增加，取消，提交按钮 -->
+<view class="viewName" style="background-color:#fbf9fe">
+  <button class="loginBtn" bindtap="showPopup">增加</button>
+  <view class="container2">
+    <button class="resetBtn" bindtap="returnHomepage">取消</button>
+    <button class="resetBtn" bindtap="listUpload">提交</button>
+  </view>
+</view>

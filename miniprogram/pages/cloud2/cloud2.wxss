@@ -1,1 +1,31 @@
 /* miniprogram/pages/cloud2/cloud2.wxss */
+.container2{
+  margin-top: 500rpx;
+  display: flex;
+}
+.container1{
+  display: flex;
+  
+}
+.resetBt3{
+font-size: 30rpx;
+background-color:lightcoral;
+}
+.resetBt2{
+font-size: 30rpx;
+background-color: lightgreen;
+}
+.page{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+ 
+  width: 80%;
+  max-width: 600rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 10rpx;
+  box-sizing: bordre-box;
+  transform: translate(-50%, -50%); 
+  overflow: hidden;
+  background: #fff;
+}
