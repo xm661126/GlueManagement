@@ -1,0 +1,20 @@
+<view>云函数库</view>
+<button bindtap="insert">插入数据</button>
+<button bindtap="update">更新数据</button>
+<button bindtap="search">查找数据</button>
+<button bindtap="delete">删除数据</button>
+<view>云函数</view>
+<button bindtap="sum">调用云函数</button>
+<button bindtap="getOpenId">获取当前用户</button>
+<button bindtap="batchDelete">批量删除数据</button>
+
+
+<view class="itemView">输入：
+  <input class="input" name="userName" placeholder="请输入姓名" bindinput="userNameInput" />
+    <input class="input2" name="userAge" placeholder="请输入年龄" bindinput="userAgeInput" />
+</view>
+<button class="inputBtn" bindtap="inputBtnClick">保存</button>
+
+<view class="searchView">查询结果：
+  <view class="nowSearch">{{nowSearch_res}}</view>
+</view>
